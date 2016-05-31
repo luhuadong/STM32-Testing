@@ -24,7 +24,8 @@
 #include <stdio.h>
 #include "led.h"
 #include "SysTick.h"
-#include "key.h" 
+#include "key.h"
+#include "exti.h" 
 
 
 /**
@@ -36,7 +37,8 @@ int main(void)
 {
 	LED_GPIO_Config();
 	SysTick_Init();
-	Key_GPIO_Config();
+	//Key_GPIO_Config();
+	Exti_Key_Config();
 	
 	LED1(ON);
 	LED3(ON);
@@ -48,6 +50,7 @@ int main(void)
 		LED2(OFF);
 		Delay_us(50000);
 
+		/*
 		if(Key_Scan(GPIOE, GPIO_Pin_5) == KEY_ON) {
 			GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)((1 - GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_3))));
 		}
@@ -55,6 +58,7 @@ int main(void)
 		if(Key_Scan(GPIOE, GPIO_Pin_6) == KEY_ON) {
 			GPIO_WriteBit(GPIOC, GPIO_Pin_5, (BitAction)((1 - GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_5))));
 		}
+		*/
   	}
 }
 

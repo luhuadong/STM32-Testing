@@ -161,7 +161,14 @@ void SysTick_Handler(void)
 
 void EXTI9_5_IRQHandler(void)
 {
-
+	if(RESET != EXTI_GetITStatus(EXTI_Line5)) {
+		GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)((1 - GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_3))));
+		EXTI_ClearITPendingBit(EXTI_Line5);	// Clears the EXTI_Line5 pending bit
+	}
+	else if(SET == EXTI_GetITStatus(EXTI_Line6)) {
+		GPIO_WriteBit(GPIOC, GPIO_Pin_5, (BitAction)((1 - GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_5))));
+		EXTI_ClearITPendingBit(EXTI_Line6);	// Clears the EXTI_Line6 pending bit
+	}
 }
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
