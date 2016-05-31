@@ -23,7 +23,9 @@
 #include "stm32f10x.h"
 #include <stdio.h>
 #include "led.h"
+#include "SysTick.h" 
 
+/*
 void delay(unsigned int time)
 {
 	int i, count;
@@ -33,6 +35,7 @@ void delay(unsigned int time)
 		while(count--) ;
 	}
 }
+*/
 
 /**
   * @brief  Main program.
@@ -41,36 +44,18 @@ void delay(unsigned int time)
   */
 int main(void)
 {
-	int const count = 1000;
-	int i, j;
-
 	LED_GPIO_Config();
+	SysTick_Init();
 	
 	LED1(ON);
 	LED3(ON);
   	
 	while (1)
   	{
-		for(i=0; i<=count; i++)
-		{
-			j = count-i;
-			LED2(ON);
-			delay(i);
-			LED2(OFF);
-			delay(j);
-		}
-
-		for(i=count; i>=0; i--)
-		{
-			j = count-i;
-			LED2(ON);
-			delay(i);
-			LED2(OFF);
-			delay(j);
-		}
-
-		delay(20000);
-
+		LED2(ON);
+		Delay_us(50000);
+		LED2(OFF);
+		Delay_us(50000);
   	}
 }
 
