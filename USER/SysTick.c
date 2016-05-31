@@ -55,6 +55,9 @@ void Delay_us(uint32_t nTime)
 
 	// Waiting here
 	while(TimingDelay != 0) ;
+
+	// Should I disable SysTick timer here 
+	//SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
 }
 
 /*

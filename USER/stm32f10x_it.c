@@ -159,5 +159,9 @@ void SysTick_Handler(void)
   * @}
   */ 
 
+void EXTI9_5_IRQHandler(void)
+{
+
+}
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
