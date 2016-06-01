@@ -26,6 +26,7 @@
 #include "SysTick.h"
 #include "key.h"
 #include "exti.h" 
+#include "usart1.h"
 
 
 /**
@@ -39,6 +40,11 @@ int main(void)
 	SysTick_Init();
 	//Key_GPIO_Config();
 	Exti_Key_Config();
+	USART1_Config();
+
+	printf("\r\n Project: STM32-Testing. \r\n");
+	printf("\r\n 欢迎进入 STM32 实验系统 \r\n");
+	USART1_Printf(USART1, "\r\n Testing from USART1_Printf \r\n");
 	
 	LED1(ON);
 	LED3(ON);

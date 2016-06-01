@@ -171,4 +171,28 @@ void EXTI9_5_IRQHandler(void)
 	}
 }
 
+#include <stdio.h>
+void USART1_IRQHandler(void)
+{
+	u8 c;
+	// 将接收到的字符回显到串口输出，实现交互
+	// USART_IT_RXNE: Receive Data register not empty interrupt 
+	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+	{ 	
+	    c=USART1->DR;
+		if(c == 0x0d) {	// 回车键
+			printf("\r\n");
+		}
+		else if(c == 0x08) { // 退格键
+			//printf("%c",c);
+			//c = 0x7f;
+			//printf("%c",c);
+		}
+		else {
+	  		printf("%c",c);    //将接受到的数据直接返回打印
+		}
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+	} 
+}
+
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
