@@ -27,7 +27,12 @@
 #include "key.h"
 #include "exti.h" 
 #include "usart1.h"
+#include "adc.h"
 
+
+extern __IO uint16_t ADC_ConvertedValue;
+
+static float ADC_ConvertedValueLocal;
 
 /**
   * @brief  Main program.
@@ -41,6 +46,7 @@ int main(void)
 	//Key_GPIO_Config();
 	Exti_Key_Config();
 	USART1_Config();
+	ADC_Potentiometer_Config();
 
 	printf("\r\n Project: STM32-Testing. \r\n");
 	printf("\r\n 欢迎进入 STM32 实验系统 \r\n");
@@ -51,10 +57,13 @@ int main(void)
   	
 	while (1)
   	{
+		ADC_ConvertedValueLocal = (float)ADC_ConvertedValue / 4096 * 3.3;
+		printf("ADC_Potentiometer_Value = %.2f (%u%%)\r\n", ADC_ConvertedValueLocal, (u32)(ADC_ConvertedValueLocal/3.3*100));
 		LED2(ON);
 		Delay_us(50000);
 		LED2(OFF);
 		Delay_us(50000);
+
 
 		/*
 		if(Key_Scan(GPIOE, GPIO_Pin_5) == KEY_ON) {
