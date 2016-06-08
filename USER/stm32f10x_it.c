@@ -195,4 +195,31 @@ void USART1_IRQHandler(void)
 	} 
 }
 
+extern __IO uint32_t TimeDisplay;
+
+void RTC_IRQHandler(void)
+{
+	if (RTC_GetITStatus(RTC_IT_SEC) != RESET)
+	{
+		/* Clear the RTC Second interrupt */
+		RTC_ClearITPendingBit(RTC_IT_SEC);
+		
+		/* Toggle GPIO_LED pin 6 each 1s */
+		//GPIO_WriteBit(GPIO_LED, GPIO_Pin_6, (BitAction)(1 - GPIO_ReadOutputDataBit(GPIO_LED, GPIO_Pin_6)));
+		
+		/* Enable time update */
+		TimeDisplay = 1;
+		
+		/* Wait until last write operation on RTC registers has finished */
+		RTC_WaitForLastTask();
+		/* Reset RTC Counter when Time is 23:59:59 */
+		if (RTC_GetCounter() == 0x00015180)
+		{
+			RTC_SetCounter(0x0);
+			/* Wait until last write operation on RTC registers has finished */
+			RTC_WaitForLastTask();
+		}
+	}
+}
+
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

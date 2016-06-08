@@ -4,82 +4,530 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 D:\workspace\stm32\0_mkpro\STM32-Testing\USER\STM32-DEMO.uvproj
-Project File Date:  06/02/2016
+Project File Date:  06/04/2016
 
 <h2>Output:</h2>
 Build target 'STM32-DEMO'
-assembling startup_stm32f10x_hd.s...
-compiling core_cm3.c...
-compiling system_stm32f10x.c...
-compiling misc.c...
-compiling stm32f10x_adc.c...
-compiling stm32f10x_bkp.c...
-compiling stm32f10x_can.c...
-compiling stm32f10x_cec.c...
-compiling stm32f10x_crc.c...
-compiling stm32f10x_dac.c...
-compiling stm32f10x_dbgmcu.c...
-compiling stm32f10x_dma.c...
-compiling stm32f10x_exti.c...
-compiling stm32f10x_flash.c...
-compiling stm32f10x_fsmc.c...
-compiling stm32f10x_gpio.c...
-compiling stm32f10x_i2c.c...
-compiling stm32f10x_iwdg.c...
-compiling stm32f10x_pwr.c...
-compiling stm32f10x_rcc.c...
-compiling stm32f10x_rtc.c...
-compiling stm32f10x_sdio.c...
-compiling stm32f10x_spi.c...
-compiling stm32f10x_tim.c...
-compiling stm32f10x_usart.c...
-compiling stm32f10x_wwdg.c...
 compiling main.c...
-main.c(48): error:  #268: declaration may not appear after executable statement in block
-main.c(48): error:  #20: identifier "ADC_Potentiometer_Config" is undefined
-main.c(50): error:  #79: expected a type specifier
-main.c(50): error:  #159: declaration is incompatible with previous "printf" (declared at line 361 of "D:\Keil\ARM\RV31\INC\stdio.h")
-main.c(60): error:  #140: too many arguments in function call
 compiling stm32f10x_it.c...
-compiling led.c...
-compiling SysTick.c...
-compiling key.c...
-compiling exti.c...
 compiling usart1.c...
-compiling adc.c...
-adc.h(15): warning:  #1-D: last line of file ends without a newline
-adc.c(13): error:  #65: expected a ";"
-adc.c(14): error:  #268: declaration may not appear after executable statement in block
-adc.c(26): error:  #20: identifier "DMA_InitStruct" is undefined
+compiling rtc.c...
+rtc.c(88): warning:  #223-D: function "printf" declared implicitly
+rtc.c(148): warning:  #223-D: function "printf" declared implicitly
+rtc.c(160): warning:  #223-D: function "printf" declared implicitly
+rtc.c(166): error:  #20: identifier "TimeDisplay" is undefined
 Target not created
 Build target 'STM32-DEMO'
-compiling main.c...
-main.c(48): error:  #268: declaration may not appear after executable statement in block
-main.c(48): error:  #20: identifier "ADC_Potentiometer_Config" is undefined
-main.c(50): error:  #79: expected a type specifier
-main.c(50): error:  #159: declaration is incompatible with previous "printf" (declared at line 361 of "D:\Keil\ARM\RV31\INC\stdio.h")
-main.c(60): error:  #140: too many arguments in function call
-compiling adc.c...
+compiling rtc.c...
+rtc.c(167): error:  #20: identifier "TimeDisplay" is undefined
 Target not created
 Build target 'STM32-DEMO'
-compiling main.c...
-main.c(48): warning:  #223-D: function "ADC_Potentiometer_Config" declared implicitly
-main.c(60): warning:  #181-D: argument is incompatible with corresponding format string conversion
+compiling stm32f10x_it.c...
+stm32f10x_it.c(209): error:  #20: identifier "TimeDisplay" is undefined
+compiling rtc.c...
+Target not created
+Build target 'STM32-DEMO'
+compiling stm32f10x_it.c...
 linking...
-Program Size: Code=11312 RO-data=336 RW-data=56 ZI-data=1024  
+Program Size: Code=13312 RO-data=404 RW-data=60 ZI-data=1028  
 FromELF: creating hex file...
-"..\Output\STM32-DEMO.axf" - 0 Error(s), 2 Warning(s).
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
 Build target 'STM32-DEMO'
-compiling main.c...
-main.c(61): warning:  #181-D: argument is incompatible with corresponding format string conversion
+compiling stm32f10x_it.c...
 linking...
-Program Size: Code=11312 RO-data=336 RW-data=56 ZI-data=1024  
+Program Size: Code=13244 RO-data=404 RW-data=60 ZI-data=1028  
+FromELF: creating hex file...
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'STM32-DEMO'
+compiling stm32f10x_it.c...
+compiling usart1.c...
+usart1.c(17): warning:  #177-D: variable "NVIC_InitStructure" was declared but never referenced
+linking...
+Program Size: Code=13264 RO-data=404 RW-data=60 ZI-data=1028  
 FromELF: creating hex file...
 "..\Output\STM32-DEMO.axf" - 0 Error(s), 1 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'STM32-DEMO'
+compiling main.c...
+compiling rtc.c...
+linking...
+Program Size: Code=13276 RO-data=404 RW-data=60 ZI-data=1028  
+FromELF: creating hex file...
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
 Build target 'STM32-DEMO'
 compiling main.c...
 linking...
-Program Size: Code=11364 RO-data=336 RW-data=56 ZI-data=1024  
+Program Size: Code=13284 RO-data=404 RW-data=60 ZI-data=1028  
+FromELF: creating hex file...
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'STM32-DEMO'
+compiling main.c...
+linking...
+Program Size: Code=13324 RO-data=404 RW-data=60 ZI-data=1028  
+FromELF: creating hex file...
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'STM32-DEMO'
+compiling main.c...
+linking...
+Program Size: Code=13344 RO-data=404 RW-data=60 ZI-data=1028  
+FromELF: creating hex file...
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'STM32-DEMO'
+compiling main.c...
+linking...
+Program Size: Code=13344 RO-data=404 RW-data=60 ZI-data=1028  
+FromELF: creating hex file...
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'STM32-DEMO'
+compiling main.c...
+linking...
+Program Size: Code=13328 RO-data=404 RW-data=60 ZI-data=1028  
+FromELF: creating hex file...
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'STM32-DEMO'
+linking...
+Program Size: Code=13328 RO-data=404 RW-data=60 ZI-data=1028  
+FromELF: creating hex file...
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'STM32-DEMO'
+compiling main.c...
+linking...
+Program Size: Code=13328 RO-data=404 RW-data=60 ZI-data=1028  
+FromELF: creating hex file...
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "D:\workspace\stm32\0_mkpro\STM32-Testing\USER\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.60a, compiled Jan 16 2013 17:15:30
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+S/N : 17892859 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'STM32-DEMO'
+compiling main.c...
+linking...
+Program Size: Code=13352 RO-data=404 RW-data=60 ZI-data=1028  
 FromELF: creating hex file...
 "..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
 Load "..\\Output\\STM32-DEMO.AXF" 

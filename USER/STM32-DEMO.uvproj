@@ -626,6 +626,16 @@
               <FileType>5</FileType>
               <FilePath>.\adc.h</FilePath>
             </File>
+            <File>
+              <FileName>rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>rtc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\rtc.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

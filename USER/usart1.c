@@ -39,13 +39,13 @@ void USART1_Config(void)
 	USART_Init(USART1, &USART_InitStruct);
 
 	/* USART1 interrupt config */
-	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+	/*USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;	// USART1 global Interrupt
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;	// level 0	
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;	// level 1
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-	NVIC_Init(&NVIC_InitStructure);
+	NVIC_Init(&NVIC_InitStructure);*/
 
 	/* Enable USART1 */
 	USART_Cmd(USART1, ENABLE);
@@ -197,5 +197,41 @@ void USART1_Printf(USART_TypeDef* USARTx, uint8_t *Data,...)
 		else USART_SendData(USARTx, *Data++);
 		while( USART_GetFlagStatus(USARTx, USART_FLAG_TC) == RESET );
 	}
+}
+
+/*
+ * 函数名：USART_Scanf
+ * 描述  ：串口从超级终端中获取数值
+ * 输入  ：- value 用户在超级终端中输入的数值
+ * 输出  ：无
+ * 调用  ：内部调用
+ */ 
+uint8_t USART_Scanf(uint32_t value)
+{
+	uint32_t index = 0;
+	uint32_t tmp[2] = {0, 0};
+	
+	while (index < 2)
+	{
+		/* Loop until RXNE = 1 */
+		while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET)
+		{}
+		tmp[index++] = (USART_ReceiveData(USART1));
+		// 从串口终端里面输进去的数是ASCII码值
+		if ((tmp[index - 1] < 0x30) || (tmp[index - 1] > 0x39))
+		{
+			printf("\n\rPlease enter valid number between 0 and 9");
+			index--;
+		}
+	}
+	/* Calculate the Corresponding value */
+	index = (tmp[1] - 0x30) + ((tmp[0] - 0x30) * 10);
+	/* Checks */
+	if (index > value)
+	{
+		printf("\n\rPlease enter valid number between 0 and %d", value);
+		return 0xFF;
+	}
+	return index;
 }
 /******************* (C) COPYRIGHT 2012 WildFire Team *****END OF FILE************/

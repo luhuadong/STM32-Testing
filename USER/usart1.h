@@ -17,4 +17,6 @@ void USART1_Printf(USART_TypeDef* USARTx, uint8_t *Data, ...);
 
 // void USART1_NVIC_Config(void);
 
+uint8_t USART_Scanf(uint32_t value);
+
 #endif	// __USART1_H__
